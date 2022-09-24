@@ -1,8 +1,9 @@
-import './styles.scss';
-import { Configuration } from 'react-md';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+
+import { Configuration } from 'react-md';
 import App from './App';
+import './App.scss';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
