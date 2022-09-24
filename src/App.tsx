@@ -2,7 +2,6 @@ import React, { useRef, useState, useEffect } from 'react';
 import Markdown from 'marked-react';
 import initState from './initialState';
 import { TextField } from '@mui/material';
-import './App.css';
 import { AppBar, AppBarTitle, AppBarAction } from '@react-md/app-bar';
 import {
   SaveSVGIcon,
