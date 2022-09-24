@@ -1,24 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Markdown from "marked-react";
+import initState from "./initialState";
 
 function App() {
+  const [mdText, setMdText] = useState(initState)
+
+  const handleTextChange = (e:React.ChangeEvent<HTMLTextAreaElement>) => {
+    setMdText(e.target.value);
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <textarea id='editor' value={mdText}  onChange={handleTextChange}></textarea>
+      <div id='preview'>Preview Area</div>
+        <Markdown>{mdText}</Markdown>
     </div>
   );
 }
