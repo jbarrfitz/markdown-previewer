@@ -3,6 +3,12 @@ import Markdown from 'marked-react';
 import initState from './initialState';
 import { TextField } from '@mui/material';
 import './App.css';
+import { AppBar, AppBarTitle, AppBarAction } from '@react-md/app-bar';
+import {
+  SaveSVGIcon,
+  RefreshSVGIcon,
+  InfoSVGIcon,
+} from '@react-md/material-icons';
 
 function App() {
   const [mdText, setMdText] = useState(initState);
@@ -18,8 +24,19 @@ function App() {
   }, []);
 
   return (
-    <div>
-      <h1>Markdown Previewer</h1>
+    <div className='container'>
+      <AppBar theme='primary'>
+        <AppBarTitle>Markdown Previewer</AppBarTitle>
+        <AppBarAction aria-label='Save'>
+          <SaveSVGIcon />
+        </AppBarAction>
+        <AppBarAction aria-label='Resete'>
+          <RefreshSVGIcon />
+        </AppBarAction>
+        <AppBarAction aria-label='Info'>
+          <InfoSVGIcon />
+        </AppBarAction>
+      </AppBar>
       <div className='App'>
         <div id='text-area'>
           <h2>Markdown Text</h2>
