@@ -1,7 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react';
 import Markdown from 'marked-react';
 import initState from './initialState';
-import { TextField } from '@mui/material';
 import './App.css';
 import { AppBar, AppBarTitle, AppBarAction } from '@react-md/app-bar';
 import {
@@ -9,6 +8,7 @@ import {
   RefreshSVGIcon,
   InfoSVGIcon,
 } from '@react-md/material-icons';
+import { TextArea } from '@react-md/form';
 
 function App() {
   const [mdText, setMdText] = useState(initState);
@@ -40,13 +40,12 @@ function App() {
       <div className='App'>
         <div id='text-area'>
           <h2>Markdown Text</h2>
-          <TextField
-            multiline
-            fullWidth
-            maxRows='20'
+          <TextArea
+            stretch
+            maxRows={20}
             id='editor'
             value={mdText}
-            inputRef={refName}
+            ref={refName}
             onChange={handleTextChange}
           />
         </div>
