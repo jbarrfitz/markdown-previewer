@@ -1,0 +1,10 @@
+.App {
+  display: flex;
+  margin: auto;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+}
+
+#text-area {
+  min-width: 400px;
+}
