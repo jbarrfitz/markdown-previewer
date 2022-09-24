@@ -82,7 +82,7 @@ function App() {
         <AppBarAction {...infoTooltip.elementProps} aria-label='Info'>
           <InfoSVGIcon />
         </AppBarAction>
-        <Tooltip {...infoTooltip.tooltipProps}>Visit Jerry's Portfolio</Tooltip>
+        <Tooltip {...infoTooltip.tooltipProps}>About the Developer</Tooltip>
       </AppBar>
       <div className='App'>
         <div id='text-area'>
