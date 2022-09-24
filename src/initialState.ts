@@ -20,11 +20,9 @@ ___
 
 **This is bold text**
 
-__This is bold text__
-
 *This is italic text*
 
-_This is italic text_
+***This text is bold and italic.***
 
 ~~Strikethrough~~
 
@@ -35,6 +33,12 @@ _This is italic text_
 > Blockquotes can also be nested...
 >> ...by using additional greater-than signs right next to each other...
 > > > ...or with spaces between arrows.
+
+## Unordered Lists
+
+- First item
+- Second item
+- Third item
 `;
 
 export default initialState;
